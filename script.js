@@ -1,14 +1,14 @@
 function stringChop(str, size) {
   // your code here
 	if (!str || typeof str !== "string") return [];
-	if (!chunkLength || typeof chunkLength !== "number" || chunkLength <=0){
-		throw new Error("chunkLength must be a positive number.");
+	if (!size || typeof size !== "number" || size <=0){
+		throw new Error("size must be a positive number.");
 	}
 
 	const chunks = [];
 
-	for(let i = 0; i < str.length; i += chunkLength){
-		chunks.push(str.slice(i,i + chunkLength));
+	for(let i = 0; i < str.length; i += size){
+		size.push(str.slice(i,i + size));
 	}
 	return chunks;
 }
